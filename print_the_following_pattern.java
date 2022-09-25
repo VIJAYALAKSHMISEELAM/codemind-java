@@ -8,17 +8,9 @@ class Pattern
        n=sc.nextInt();
        for(i=1;i<=n;i++)
        {
-            for(j=1;j<=n;j++)
+            for(j=n;j>0;j--)
             {
-                if(i==j)
-               {
-                   System.out.print("0");
-               }
-               else
-               {
-                   System.out.print("x");
-               }
-    
+                System.out.print(j+" ");
             }
              System.out.println();
        }
