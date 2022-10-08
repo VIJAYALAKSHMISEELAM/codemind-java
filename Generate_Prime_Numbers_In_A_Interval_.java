@@ -1,39 +1,37 @@
 import java.util.Scanner;
-class Prime
+class primes
 {
-    public static int is_it_prime(int i)
+    static int prime(int i)
     {
         int j;
-         for(j=2;j<=Math.sqrt(i);j++)
-         {
-             if(i%j==0)
-             {
-                 return 0;
-             }
-         }
-       
+        for(j=2;j<=Math.sqrt(i);j++)
+        {
+            if(i%j==0)
+            {
+                return 0;
+            }
+        }
         return 1;
     }
     public static void main(String args[])
-   {
-     Scanner sc =new Scanner(System.in);
-     int m,n,t,i;
-     m=sc.nextInt();
-     n=sc.nextInt();
-     for(i=m;i<=n;i++)
-     {
-         if(i==1)
+    {
+        Scanner sc=new Scanner(System.in);
+        int a,b,i,c;
+        a=sc.nextInt();
+        b=sc.nextInt();
+        c=0;
+    
+        for(i=a;i<=b;i++)
         {
-            continue;
-        }
-        else
-         {
-             t=is_it_prime(i);
-             if(t==1)
+            if(i==1)
             {
-               System.out.println(i);
+                continue;
             }
-         }
-     }
-   }
+            else if(prime(i)==1)
+            {
+                System.out.println(i);
+            }
+        }
+        
+    }
 }
